@@ -6,6 +6,7 @@ on 'configure' => sub {
     requires 'Alien::Build::MB', '2.00';
     requires 'Alien::Build::Plugin::Download::GitHub', '0.05';
     requires 'Mojolicious';
+    requires 'HTTP::Tiny', '0.044';
 };
 
 on 'test' => sub {

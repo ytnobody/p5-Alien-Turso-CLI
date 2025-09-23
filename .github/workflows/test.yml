@@ -33,6 +33,7 @@ jobs:
           cpanm -nq Alien::Build Alien::Build::MB
           cpanm -nq Alien::Build::Plugin::Download::GitHub
           cpanm -nq Mojolicious
+          cpanm -nq 'HTTP::Tiny@0.044'
           cpanm -nq --installdeps --with-develop --with-recommends .
       - name: Build module
         run: |
