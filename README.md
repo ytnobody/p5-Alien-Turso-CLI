@@ -1,4 +1,3 @@
-
 # NAME
 
 Alien::Turso::CLI - Install and find Turso CLI
@@ -18,13 +17,13 @@ This module will download and install the Turso CLI binary if it's not already a
 
 Turso CLI is the official command-line interface for Turso, the edge-hosted, distributed database built on libSQL.
 
-## REQUIREMENTS
+# REQUIREMENTS
 
 - Perl 5.18 or later
-- Linux x86_64 platform (currently supported)
+- Linux x86\_64 platform (currently supported)
 - Internet connection for downloading Turso CLI binary
 
-## INSTALLATION
+# INSTALLATION
 
     cpanm Alien::Turso::CLI
 
@@ -39,12 +38,30 @@ After installation, you can use the Turso CLI:
 
     perl -MAlien::Turso::CLI -E 'system Alien::Turso::CLI->bin_dir . "/turso", "--version"'
 
-## KNOWN ISSUES
+# KNOWN ISSUES
 
 During installation, you may see warnings about "Download::Negotiate" plugin. 
 These warnings are harmless and do not affect functionality. They are a known 
 issue with the current version of Alien::Build::Plugin::Download::GitHub, 
 which correctly uses the GitHub API despite the warnings.
+
+# METHODS
+
+This module inherits all methods from [Alien::Base](https://metacpan.org/pod/Alien%3A%3ABase). The most commonly used methods are:
+
+- bin\_dir
+
+    Returns the directory containing the turso binary.
+
+- exe
+
+    Returns the full path to the turso executable.
+
+# SEE ALSO
+
+- [Alien](https://metacpan.org/pod/Alien)
+- [Alien::Base](https://metacpan.org/pod/Alien%3A%3ABase)
+- [https://turso.tech/](https://turso.tech/)
 
 # LICENSE
 

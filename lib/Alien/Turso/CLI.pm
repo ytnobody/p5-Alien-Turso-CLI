@@ -21,8 +21,8 @@ Alien::Turso::CLI - Install and find Turso CLI
     use Alien::Turso::CLI;
     use Alien qw( Alien::Turso::CLI );
     
-    my $turso = Alien::Turso::CLI->bin_dir;
-    system "$turso/turso", "version";
+    my $turso = Alien::Turso::CLI->bin_dir . '/turso';
+    system $turso, "--version";
 
 =head1 DESCRIPTION
 
@@ -49,7 +49,29 @@ Internet connection for downloading Turso CLI binary
 
 =back
 
-=head2 METHODS
+=head1 INSTALLATION
+
+    cpanm Alien::Turso::CLI
+
+Or manually:
+
+    perl Build.PL
+    ./Build
+    ./Build test
+    ./Build install
+
+After installation, you can use the Turso CLI:
+
+    perl -MAlien::Turso::CLI -E 'system Alien::Turso::CLI->bin_dir . "/turso", "--version"'
+
+=head1 KNOWN ISSUES
+
+During installation, you may see warnings about "Download::Negotiate" plugin. 
+These warnings are harmless and do not affect functionality. They are a known 
+issue with the current version of Alien::Build::Plugin::Download::GitHub, 
+which correctly uses the GitHub API despite the warnings.
+
+=head1 METHODS
 
 This module inherits all methods from L<Alien::Base>. The most commonly used methods are:
 

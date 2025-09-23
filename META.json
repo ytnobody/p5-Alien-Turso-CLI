@@ -28,7 +28,10 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.035"
+            "Alien::Build" : "2.00",
+            "Alien::Build::MB" : "2.00",
+            "Alien::Build::Plugin::Download::GitHub" : "0.05",
+            "Module::Build" : "0.4005"
          }
       },
       "develop" : {
@@ -42,6 +45,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Alien::Base" : "2.00",
             "perl" : "5.018"
          }
       },
@@ -52,6 +56,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/ytnobody/p5-Alien-Turso-CLI/issues"
+      },
+      "homepage" : "https://github.com/ytnobody/p5-Alien-Turso-CLI",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/ytnobody/p5-Alien-Turso-CLI.git",
+         "web" : "https://github.com/ytnobody/p5-Alien-Turso-CLI"
+      }
+   },
    "version" : "0.01",
    "x_serialization_backend" : "JSON::PP version 4.06",
    "x_static_install" : 1
