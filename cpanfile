@@ -1,4 +1,4 @@
-requires 'perl', '5.008001';
+requires 'perl', '5.018';
 requires 'Alien::Base', '2.00';
 
 on 'configure' => sub {

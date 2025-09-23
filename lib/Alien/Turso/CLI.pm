@@ -1,5 +1,5 @@
 package Alien::Turso::CLI;
-use 5.008001;
+use 5.018;
 use strict;
 use warnings;
 
@@ -30,6 +30,24 @@ Alien::Turso::CLI provides the Turso CLI (Command Line Interface) for Perl appli
 This module will download and install the Turso CLI binary if it's not already available on your system.
 
 Turso CLI is the official command-line interface for Turso, the edge-hosted, distributed database built on libSQL.
+
+=head1 REQUIREMENTS
+
+=over 4
+
+=item *
+
+Perl 5.18 or later
+
+=item *
+
+Linux x86_64 platform (currently supported)
+
+=item *
+
+Internet connection for downloading Turso CLI binary
+
+=back
 
 =head2 METHODS
 
