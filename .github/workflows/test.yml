@@ -29,7 +29,10 @@ jobs:
         with:
           perl-version: ${{ matrix.perl }}
       - name: Install dependencies
-        run: cpanm -nq --installdeps --with-develop --with-recommends .
+        run: |
+          cpanm -nq Alien::Build Alien::Build::MB
+          cpanm -nq Alien::Build::Plugin::Download::GitHub
+          cpanm -nq --installdeps --with-develop --with-recommends .
       - name: Build module
         run: |
           perl Build.PL
