@@ -5,6 +5,7 @@ on 'configure' => sub {
     requires 'Alien::Build', '2.00';
     requires 'Alien::Build::MB', '2.00';
     requires 'Alien::Build::Plugin::Download::GitHub', '0.05';
+    requires 'Mojolicious';
 };
 
 on 'test' => sub {
