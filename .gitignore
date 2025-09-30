@@ -35,3 +35,9 @@ MYMETA.*
 *.tar.gz
 *.zip
 /share/
+
+# Build and release generated files
+MANIFEST
+MANIFEST.SKIP
+META.yml
+META.json
